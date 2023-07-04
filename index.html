@@ -21,19 +21,19 @@
                 
                 <div>
                     <div class="row mt-3">
-                        <div class="col-5">
+                        <div class="col-xs-12 col-md-5">
                             <label class="w-100" name="Card" for="card">Card #</label>
-                            <input  class="form-control" id="card" type="text" placeholder="XXXXXXXXXXXX">
+                            <input  class="form-control" id="card" type="text" placeholder="XXXXXXXXXXXX" pattern="[0-9]{12}" required >
                         </div>
-                        <div class="col-3">
+                        <div class="col-xs-12 col-md-3">
                             <label class="w-100" name="cvc" for="cvc">CVC #</label>
-                            <input  class="form-control" id="cvc" type="text" placeholder="0000">
+                            <input  class="form-control" id="cvc" type="text" placeholder="0000" pattern="[0-9]{4}" required>
                         </div>
-                        <div class="col-4">
+                        <div class="col-xs-12 col-md-4">
                             <label class="w-100" for="amount">Amount</label>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">$</span>
-                                <input type="text" name="amount" id="amount" class="form-control" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" name="amount" id="amount" class="form-control" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1" required pattern="[0-9]+">
                               </div>
                         </div>
                     </div>
@@ -41,66 +41,64 @@
             
                 <div>
                     <div class="row">
-                        <div class="col-6">
-                            <div class="col-12">
-                                <label class="w-100" name="first-name" for="first-name">First Name</label>
-                                <input  class="form-control" id="first-name" type="text">
-                            </div>
-                            <div class="col-12 my-2">
-                                <label class="w-100" name="city" for="first-name">City</label>
-                                <input  class="form-control" id="city" type="text">
-                            </div>
-                            <div class="col-12 my-2">
-                                <p class="w-100 my-1">We acept:</p>
-                                <div class="d-flex">
-                                    <div class="d-flex-inline bg-secondary text-white px-3 py-1 rounded">
-                                        <input type="radio" name="credit-card" id="mastercard">
-                                        <label for="martercard">
-                                            <i class="fab fa-cc-mastercard fa-lg"></i>
-                                        </label>
-                                        <input type="radio" name="credit-card" id="visa">
-                                        <label for="visa">
-                                            <i class="fab fa-cc-visa fa-lg"></i>
-                                        </label>
-                                        <input type="radio" name="credit-card" id="diners-club">
-                                        <label for="diners-club">
-                                            <i class="fab fa-cc-diners-club fa-lg"></i>
-                                        </label>
-                                        <input type="radio" name="credit-card" id="amex">
-                                        <label for="amex">
-                                            <i class="fab fa-cc-amex fa-lg"></i>
-                                        </label>
-                                    </div>
+                        <div class="col-xs-12 col-md-6">
+                            <label class="w-100" name="first-name" for="first-name">First Name</label>
+                            <input  class="form-control" id="first-name" type="text" pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]+" required>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <label class="w-100" for="last-name">Last Name</label>
+                            <input  class="form-control" name="last-name" id="last-name" type="text" pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]+" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <label class="w-100" name="city" for="city">City</label>
+                            <input  class="form-control" id="city" type="text" pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]+" required>
+                        </div>
+                        <div class="col-xs-12 col-md-3">
+                            <label class="w-100" for="select">State</label>
+                            <select class="form-select" aria-label="Default select example" name="select" id="select" required>
+                                <option value="" disabled selected>Pick a state</option>
+                                <option value="valencia">Valencia</option>
+                                <option value="castellon">Castellon</option>
+                                <option value="alicante">Alicante</option>
+                              </select>
+                        </div>
+                        <div class="col-xs-12 col-md-3">
+                            <label class="w-100" for="postal-code">Postal Code</label>
+                            <input  class="form-control" name="postal-code" id="postal-code" type="text" pattern="[0-9]{5}" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 mb-2">
+                            <p class="w-100 my-1">We acept:</p>
+                            <div class="d-flex">
+                                <div class="d-flex-inline bg-secondary text-white px-3 py-1 rounded">
+                                    <input type="radio" name="credit-card" id="mastercard" required>
+                                    <label for="martercard">
+                                        <i class="fab fa-cc-mastercard fa-lg"></i>
+                                    </label>
+                                    <input type="radio" name="credit-card" id="visa">
+                                    <label for="visa">
+                                        <i class="fab fa-cc-visa fa-lg"></i>
+                                    </label>
+                                    <input type="radio" name="credit-card" id="diners-club">
+                                    <label for="diners-club">
+                                        <i class="fab fa-cc-diners-club fa-lg"></i>
+                                    </label>
+                                    <input type="radio" name="credit-card" id="amex">
+                                    <label for="amex">
+                                        <i class="fab fa-cc-amex fa-lg"></i>
+                                    </label>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="col-12">
-                                <label class="w-100" for="last-name">Last Name</label>
-                                <input  class="form-control" name="last-name" id="last-name" type="text">
-                            </div>
-                            <div class="row my-2">
-                                <div class="col-6">
-                                    <label class="w-100" for="last-name">State</label>
-                                    <select class="form-select" aria-label="Default select example" name="select" id="select">
-                                        <option selected>Pick a state</option>
-                                        <option value="valencia">Valencia</option>
-                                        <option value="castellon">Castellon</option>
-                                        <option value="alicante">Alicante</option>
-                                      </select>
-                                </div>
-                                <div class="col-6">
-                                    <label class="w-100" for="postal-code">Postal Code</label>
-                                    <input  class="form-control" name="postal-code" id="postal-code" type="text">
-                                </div>
-                            </div>
-                            <div class="col-12 my-2">
-                                <label class="w-100" for="message">Message</label>
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                                    <label for="floatingTextarea2"></label>
-                                  </div>
-                            </div>
+                        <div class="col-xs-12 col-md-6 mb-2">
+                            <label class="w-100" for="floatingTextarea2">Message</label>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" maxlength="140"></textarea>
+                                <label for="floatingTextarea2"></label>
+                              </div>
                         </div>
                     </div>
                 </div>
