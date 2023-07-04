@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form action="">
@@ -15,7 +16,7 @@
                 <h1>Payment for example</h1>
             </div>
             <div class="card-body">
-                <div class="bg-danger my-2 p-2 text-danger-emphasis bg-opacity-25 border border border-danger-subtle rounded">
+                <div class="alert">
                     Some Fields are missing
                 </div>
                 
@@ -43,17 +44,17 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <label class="w-100" name="first-name" for="first-name">First Name</label>
-                            <input  class="form-control" id="first-name" type="text" pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]+" required>
+                            <input  class="form-control" id="first-name" type="text" pattern="[ A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]+" required>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <label class="w-100" for="last-name">Last Name</label>
-                            <input  class="form-control" name="last-name" id="last-name" type="text" pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]+" required>
+                            <input  class="form-control" name="last-name" id="last-name" type="text" pattern="[ A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]+" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <label class="w-100" name="city" for="city">City</label>
-                            <input  class="form-control" id="city" type="text" pattern="[A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]+" required>
+                            <input  class="form-control" id="city" type="text" pattern="[ A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]+" required>
                         </div>
                         <div class="col-xs-12 col-md-3">
                             <label class="w-100" for="select">State</label>
@@ -97,8 +98,10 @@
                             <label class="w-100" for="floatingTextarea2">Message</label>
                             <div class="form-floating">
                                 <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" maxlength="140"></textarea>
-                                <label for="floatingTextarea2"></label>
-                              </div>
+                                <label class="fs-6 fw-light" for="floatingTextarea2">Add any notes here.</label>
+                            </div>
+                            <label class="d-flex justify-content-end fs-6 fw-light" for="floatingTextarea2">Not required.</label>
+                            
                         </div>
                     </div>
                 </div>
@@ -107,7 +110,7 @@
             <div class="card-footer d-flex">
                 <div class="ms-auto">
                     <input class="btn btn-secondary" type="reset" value="Cancel">
-                    <input class="btn btn-primary" type="submit" value="Send">
+                    <input class="btn btn-primary send" type="submit" value="Send">
                 </div>
             </div>
         </div>
