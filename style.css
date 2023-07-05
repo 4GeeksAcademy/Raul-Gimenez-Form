@@ -1,5 +1,5 @@
 form:invalid {
-    .alert {
+    .alert{
         background: rgb(255, 243, 208);
         margin: 1rem 0rem;
         padding: 0.5rem;
@@ -7,9 +7,18 @@ form:invalid {
         border: rgb(141, 122, 0) solid 1px;
         font-size: medium;
     }   
+    .btn-alert {
+        background: rgb(255, 191, 0);
+        margin: 1rem 0rem;
+        padding: 0.5rem 2rem;
+        color: rgb(0, 0, 0);
+        border: rgb(0, 0, 0) solid 1px;
+        font-size: medium;
+        border-radius: 5px;
+    } 
 }
     
-.alert {
+.alert, .btn-alert {
         background: none;
         margin: 0;
         padding: 0;
