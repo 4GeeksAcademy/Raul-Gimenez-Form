@@ -16,9 +16,12 @@ form:invalid {
         font-size: medium;
         border-radius: 5px;
     } 
+    .alert-text {
+        font-size: medium;
+    }
+
 }
-    
-.alert, .btn-alert {
+.alert, .btn-alert, .alert-text {
         background: none;
         margin: 0;
         padding: 0;
